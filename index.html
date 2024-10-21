@@ -10,21 +10,26 @@
 <body>
 
     <header>
-        <button id="new" onclick="newBook()">New Book</button>
-        <select id="sortOptions" onchange="sortBooks()">
+        <button id="new" onclick="showMessage('New Book', 'success')" class="button">New Book</button>
+        <select id="sortOptions" onchange="sortBooks()" class="button">
             <option value="name">Sort by Name</option>
             <option value="price">Sort by Price</option>
         </select>
-        <button id="load" onclick="loadBooks()">Load Books</button>
+        <button id="load" onclick="showMessage('Show books', 'error')" class="button">Show books</button>
     </header>
 
     <div class="main-container">
         <div id="items"></div>
     
-        <div id="side-bar">Choose a book</div>
+        <div id="side-bar"></div>
       </div>
     
-      <div id="paginator"></div>
+    <div id="paginator"></div>
+
+    
+    
+    <div id="notificationArea"></div>
+
 
     <script src="model.js"></script>
     <script src="view.js"></script>

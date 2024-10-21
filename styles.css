@@ -1,0 +1,64 @@
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #96e9e1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.button {
+    min-width: 30%;
+    min-height: 60px;
+    display: inline-flex;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+.success {
+    background-color: red;
+    min-width: 30%;
+    min-height: 60px;
+}
+
+.error {
+    background-color: blue;
+    min-width: 30%;
+    min-height: 60px;
+}
+
+
+
+ 
+  
