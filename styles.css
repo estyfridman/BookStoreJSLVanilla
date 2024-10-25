@@ -1,20 +1,17 @@
 
-@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 html,
 body {
-  width: 100%;
+  width: 500px;
   height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
 }
 
 header {
-    width: 100%;
+    width: 500px;
     height: 100px;
     background: #96e9e1;
     display: flex;
@@ -26,8 +23,7 @@ header {
     min-width: 30%;
     min-height: 60px;
     display: inline-flex;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
@@ -46,6 +42,35 @@ header {
     padding: 10px;
 }
 
+.mainContainer {
+    display: flex;
+    width: 500px;
+    height: 600px;
+    background-color: #bdefec;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#booksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 200px;
+    height: 300px;
+}
+
+.book {
+    height: 100px;
+    width: 100px;
+    color: #000;
+}
+
 .success {
     background-color: red;
     min-width: 30%;
@@ -53,7 +78,7 @@ header {
 }
 
 .error {
-    background-color: blue;
+    background-color: rgba(79,209,197,.64);
     min-width: 30%;
     min-height: 60px;
 }
