@@ -16,12 +16,21 @@ function sortBooks() {
   const sortOption = document.getElementById("sortOptions").value;
 
   let sortedBooks;
-  if (sortOption === "name") {
-    sortedBooks = storageBooks.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sortOption === "price") {
-    sortedBooks = storageBooks.sort((a, b) => a.price - b.price);
+  switch (sortOption) {
+    case "name": {
+      sortedBooks = storageBooks.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+    }
+    case "toHigh": {
+      sortedBooks = storageBooks.sort((a, b) => a.price - b.price);
+      break;
+    }
+    case "toLow": {
+      sortedBooks = storageBooks.sort((a, b) => b.price - a.price);
+      break;
+    }
   }
-
+  
   renderBooks(sortedBooks, currentPage);
   generatePaginator(sortedBooks);
 };

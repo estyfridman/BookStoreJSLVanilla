@@ -4,17 +4,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Book Store</title>
+    <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
     <div class="header">
       <button id="new" onclick="newBook()">New Book</button>
       <select id="sortOptions" onchange="sortBooks()">
           <option value="name">Sort by Name</option>
-          <option value="price">Sort by Price</option>
+          <option value="toHigh">Price: Low to High</option>
+          <option value="toLow">Price: High to Low</option>
       </select>
-      <button id="load" onclick="loadBooks()">Load Books</button> <!-- Load button -->
+      <button id="load" onclick="loadBooks()">Load Books</button> 
   </div>
   
     <div class="main-container">
@@ -25,6 +26,7 @@
   
     <div id="paginator"></div>
   
+    <script src="dump.js"></script>
     <script src="model.js"></script>
     <script src="view.js"></script>
     <script src="controller.js"></script>

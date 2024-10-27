@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
 }
-/* General page styling */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #DFF2EB;
 }
 
 /* Header styling */
@@ -16,13 +16,13 @@ body {
     justify-content: space-between; /* Align items on opposite sides */
     align-items: center; /* Center items vertically */
     padding: 20px;
-    background-color: #444;
+    background-color: #4A628A;
 }
 
 /* New Book button styling */
 .header button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #7AB2D3;
+    color: #DFF2EB;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -32,25 +32,23 @@ body {
 }
 
 .header button:hover {
-    background-color: #45a049;
+    background-color: #5886a1;
 }
 
-/* Sort options styling */
 .header select {
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #f0f0f0; /* Light background for dropdown */
+    background-color: #7AB2D3; 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .header select:hover {
-    background-color: #e0e0e0; /* Slightly darker on hover */
+    background-color: #88dcfb; 
 }
 
-/* Main container */
 .main-container {
     display: flex;
     flex-direction: row;
@@ -62,11 +60,10 @@ body {
 #items {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Adds spacing between the book items */
+    gap: 15px;
     flex: 3;
 }
 
-/* Individual book styling */
 .book {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr;
@@ -84,28 +81,28 @@ body {
 
 .book .id {
     font-weight: bold;
-    grid-column: 1; /* ID in the first column */
+    grid-column: 1; 
 }
 
 .book .ptitle {
-    grid-column: 2; /* Title in the second column */
+    grid-column: 2; 
     font-size: 18px;
     font-weight: 500;
 }
 
 .book .price {
-    grid-column: 3; /* Price in the third column */
+    grid-column: 3; 
     font-size: 16px;
 }
 
 .book .buttons {
-    grid-column: 4; /* Buttons in the fourth column */
+    grid-column: 4; 
     display: flex;
     gap: 10px;
 }
 
 .book .buttons button {
-    background-color: #007BFF;
+    background-color: #4A628A;
     color: white;
     border: none;
     padding: 6px 10px;
@@ -115,12 +112,12 @@ body {
 }
 
 .book .buttons button:hover {
-    background-color: #0056b3;
+    background-color: #2b4c86;
 }
 
 /* Sidebar styling */
 #side-bar {
-    background-color: #f0f0f0;
+    background-color: #B9E5E8;
     padding: 20px;
     border-radius: 10px;
     flex: 1;
@@ -130,14 +127,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Read book styling */
 .read-book {
     background-color: #e0f7fa;
     padding: 15px;
     border-radius: 8px;
 }
 
-/* Paginator styling */
 #paginator {
     margin: 20px 0;
     display: flex;
@@ -146,7 +141,7 @@ body {
 }
 
 #paginator button {
-    background-color: #007BFF;
+    background-color: #4A628A;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -157,16 +152,15 @@ body {
 }
 
 #paginator button:hover {
-    background-color: #0056b3;
+    background-color: #2b4c86;
 }
 
 #paginator button.active {
-    background-color: #0056b3;
+    background-color: #254170;
 }
 
-/* Success message styling */
 .success-message {
-    color: green; /* Change text color to green */
-    font-weight: bold; /* Make text bold */
-    margin-top: 10px; /* Add some space above */
+    color: #6089d0; 
+    font-weight: bold; 
+    margin-top: 10px;
 }
