@@ -1,20 +1,49 @@
-
-class Book {
-    constructor(id, name, price, rate, image) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.rate = rate;
-        this.image = image;
-    }
-}
-
-let gBooks = [
-    new Book(1, "The Martian", 100, 0, "assets/themartian.jpg"),
-    new Book(2, "Artemis", 150, 0, "assets/artemis.jpg"),
-    new Book(3, "Project Hail Mary", 99, 0, "assets/hailmary.jpg"),
-    new Book(4, "Theft of Pride", 75, 0, "assets/theftofpride.jpg"), 
-    new Book(5, "RIHANIE", 100, 0, "assets/rihanie.jpg"),
-    new Book(6, "Think Outside The Box", 150, 0, "assets/thinkoutsidethebox.jpg"),
-    new Book(7, "Dont Look Back", 80, 0, "assets/dontlookback.jpg") 
-];
+var Gbooks = [
+    { id: 1, name: "The Martian", price: 43.99, rate: 0, image: "assets/themartian.jpg" },
+    {
+      id: 2,
+      name: "Artemis",
+      price: 150,
+      rate: 0,
+      image: "assets/artemis.jpeg",
+    },
+    {
+      id: 3,
+      name: "Project Hail Mary",
+      price: 200,
+      rate: 0,
+      image: "assets/hailmary.jpeg",
+    },
+    { id: 4, name: "Trust", price: 120, rate: 0, image: "assets/trust.jpeg" },
+    {
+      id: 5,
+      name: "Dark Matter: A Novel",
+      price: 180,
+      rate: 0,
+      image: "assets/dark.jpg",
+    },
+    {
+      id: 6,
+      name: "The Object",
+      price: 54.99,
+      rate: 0,
+      image: "assets/theobject.jpg",
+    },
+    {
+      id: 7,
+      name: "Recursion",
+      price: 140,
+      rate: 0,
+      image: "assets/recursion.jpg",
+    },
+    { id: 8, name: "Imagine", price: 160, rate: 0, image: "assets/Imagine.jpg" },
+    {
+      id: 9,
+      name: "Mountain in the Sea",
+      price: 130,
+      rate: 0,
+      image: "assets/mountain.jpg",
+    },
+    { id: 10, name: "Station Eleven", price: 89.99, rate: 0, image: "assets/stationeleven.jpg" },
+  ];
+  var workingListBook = [];
