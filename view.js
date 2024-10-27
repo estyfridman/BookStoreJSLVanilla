@@ -1,21 +1,19 @@
-let currentPage = 1; // To track the current page
-const booksPerPage = 5; // Number of books per page (change as needed)
 
 function generatePaginator(books) {
   const paginatorDiv = document.getElementById("paginator");
-  paginatorDiv.innerHTML = ""; // Clear previous paginator
+  paginatorDiv.innerHTML = ""; 
 
-  const totalPages = Math.ceil(books.length / booksPerPage); // Total number of pages
+  const totalPages = Math.ceil(books.length / booksPerPage); 
 
   // Previous button
   const prevButton = document.createElement("button");
   prevButton.innerText = "Previous";
-  prevButton.disabled = currentPage === 1; // Disable if on the first page
+  prevButton.disabled = currentPage === 1; 
   prevButton.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
       renderBooks(books, currentPage);
-      generatePaginator(books); // Regenerate paginator to update button states
+      generatePaginator(books); 
     }
   });
   paginatorDiv.appendChild(prevButton);
@@ -26,13 +24,13 @@ function generatePaginator(books) {
     button.innerText = i;
 
     if (i === currentPage) {
-      button.classList.add("active"); // Highlight the current page button
+      button.classList.add("active"); 
     }
 
     button.addEventListener("click", () => {
       currentPage = i;
       renderBooks(books, currentPage);
-      generatePaginator(books); // Regenerate paginator to update button states
+      generatePaginator(books); 
     });
 
     paginatorDiv.appendChild(button);
@@ -41,29 +39,28 @@ function generatePaginator(books) {
   // Next button
   const nextButton = document.createElement("button");
   nextButton.innerText = "Next";
-  nextButton.disabled = currentPage === totalPages; // Disable if on the last page
+  nextButton.disabled = currentPage === totalPages; 
   nextButton.addEventListener("click", () => {
     if (currentPage < totalPages) {
       currentPage++;
       renderBooks(books, currentPage);
-      generatePaginator(books); // Regenerate paginator to update button states
+      generatePaginator(books); 
     }
   });
   paginatorDiv.appendChild(nextButton);
 }
 
 const renderBooks = (books, page) => {
-    // Define how many books per page
     const startIndex = (page - 1) * booksPerPage;
     const endIndex = page * booksPerPage;
   
     const items = document.getElementById("items");
-    items.innerHTML = ""; // Clear current items
+    items.innerHTML = ""; 
   
     books.slice(startIndex, endIndex).forEach((book) => {
       items.innerHTML += getBook(book);
     });
-    highlightCurrentPage(currentPage); // Call with the current page
+    highlightCurrentPage(currentPage); 
   };
 
 const getBook = (book) => {
@@ -81,7 +78,7 @@ const getBook = (book) => {
 };
 const renderReadBook = (book) => {
   var sidebar = document.getElementById("side-bar");
-  sidebar.innerHTML = ""; // Clear previous sidebar content
+  sidebar.innerHTML = ""; 
   sidebar.innerHTML = `
         <div class="read-book">
             <h1>${book.name}</h1>
@@ -103,9 +100,9 @@ function highlightCurrentPage(currentPage) {
   
     buttons.forEach((button, index) => {
       if (index + 1 === currentPage) {
-        button.style.backgroundColor = "lightblue"; // Highlight current page
+        button.style.backgroundColor = "lightblue"; 
       } else {
-        button.style.backgroundColor = ""; // Reset other buttons
+        button.style.backgroundColor = ""; 
       }
     });
 };

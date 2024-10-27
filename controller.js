@@ -9,7 +9,50 @@ function main() {
     localStorage.setItem("books", JSON.stringify(Gbooks));
     generatePaginator(Gbooks);
   }
+  createHeader();
 };
+
+function createButton(id, text, onClick) {
+  const button = document.createElement('button');
+  button.id = id;
+  button.textContent = text;
+  button.onclick = onClick;
+  return button;
+}
+
+function createSelect(id, options) {
+  const select = document.createElement('select');
+  select.id = id;
+  select.onchange = options.onchange;
+
+  options.forEach(option => {
+    const optionElement = document.createElement('option');
+    optionElement.value = option.value;
+    optionElement.textContent = option.text;   
+
+    select.appendChild(optionElement);
+  });
+
+  return select;
+}
+
+function createHeader() {
+  const headerDiv = document.getElementById('header');
+
+  const newButton = createButton('new', 'New Book', newBook);
+  const sortSelect = createSelect('sortOptions', [
+    { value: 'name', text: 'Sort by Name' },
+    { value: 'toHigh', text: 'Price: Low to High' },
+    { value: 'toLow', text: 'Price: High to Low' }
+  ]);
+  sortSelect.addEventListener('change', sortBooks);
+  document.getElementById('header').appendChild(sortSelect);
+  const loadButton = createButton('load', 'Load Books', loadBooks);
+
+  headerDiv.appendChild(newButton);
+  headerDiv.appendChild(sortSelect);
+  headerDiv.appendChild(loadButton);
+}
 
 function sortBooks() {
   const storageBooks = JSON.parse(localStorage.getItem("books")) || [];
@@ -93,8 +136,8 @@ function saveChanges(id) {
   book.image = `assets/${inputValue.replace(/\s+/g, "")}.jpg`;
   localStorage.setItem("books", JSON.stringify(storageBooks));
 
-  renderBooks(storageBooks, currentPage); // Reset to the current page after saving
-  generatePaginator(storageBooks); // Regenerate the paginator
+  renderBooks(storageBooks, currentPage); 
+  generatePaginator(storageBooks); 
   showSuccessMessage("Book saved successfully!");
 };
 

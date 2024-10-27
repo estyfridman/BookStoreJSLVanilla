@@ -8,19 +8,11 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
-    <div class="header">
-      <button id="new" onclick="newBook()">New Book</button>
-      <select id="sortOptions" onchange="sortBooks()">
-          <option value="name">Sort by Name</option>
-          <option value="toHigh">Price: Low to High</option>
-          <option value="toLow">Price: High to Low</option>
-      </select>
-      <button id="load" onclick="loadBooks()">Load Books</button> 
+    <div class="header" id="header">
   </div>
   
     <div class="main-container">
       <div id="items"></div>
-  
       <div id="side-bar">Choose a book</div>
     </div>
   
