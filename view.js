@@ -86,7 +86,7 @@ const renderReadBook = (book) => {
             <h2 id=rate-text>Rate: ${book.rate}</h2>
             <input type="number" id="rate" placeholder="Enter rate">
             <button onclick="addRate(${book.id})">Add rate</button>
-            <img src="${book.image}" alt="Read-Book">
+            <img src="${book.image}" alt="img-Book">
         </div>`;
 };
 
@@ -111,7 +111,7 @@ function editInView(book){
   var sidebar = document.getElementById("side-bar");
   sidebar.innerHTML = `
         <div class="edit-book">
-            <h1>Edit Book</h1>
+            <h1>New or Edit Book</h1>
             <input type="text" id="edit-name" placeholder="Enter name" value="${
               book ? book.name : ""
             }">
@@ -119,16 +119,16 @@ function editInView(book){
               book ? book.price : 0
             }">
             <input type="number" id="rate" placeholder="Enter rate" value="${
-              book ? book.right : 0
+              book ? book.rate : 0
             }>
             <input type="text" id="edit-image" placeholder="Enter image URL" value="${
               book ? book.image : ""
             }">
-            <input type="text" id="edit-image" placeholder="Enter image URL" value="${
+            <input type="file" id="edit-image" placeholder="Enter image URL" value="${
               book ? book.image : ""
             }">
             <button onclick="saveChanges(${
-                book ? book.id : null})">Save changes</button>
+                book ? book.id : null})">Save</button>
         </div>;`
 };
 
